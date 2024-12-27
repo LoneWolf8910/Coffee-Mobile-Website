@@ -83,7 +83,7 @@ body {
     
     .welcoming {
         position: relative;
-        top: 318px;
+        top: 418px;
     }
     
     .welcome {
@@ -93,7 +93,7 @@ body {
         align-items: center;
         color: white;
         font-size: 30px;
-        font-weight: 150;
+        font-weight: 650;
         /* font-family: "Londrina Sketch", serif; */
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-align: center;
