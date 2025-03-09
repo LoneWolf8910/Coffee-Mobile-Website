@@ -9,12 +9,21 @@
     color: #070000;
 }
 
+body {
+    background-color: #fff;
+    font-family: "Poppins", serif;
+    overflow-y: scroll;
+    line-height: 1.6;
+    color: #333;
+}
+
 nav {
     margin: 2%;
     background-color: rgb(39, 39, 39);
     margin: 0;
     padding: 10px;
     height: 230px;
+    border-bottom: 2px solid #444;
 }
 
 .location {
@@ -27,6 +36,7 @@ nav h6 {
     font-weight: 900;
     color: rgb(158, 158, 158);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
 }
 
 nav p {
@@ -56,6 +66,12 @@ nav input {
     font-size: 14px;
     font-weight: 700;
     font-family: "Poppins", serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav input:focus {
+    background-color: #333;
+    color: #fff;
 }
 
 .input-container {
@@ -71,12 +87,14 @@ nav input {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    pointer-events: none; /* Prevents the icon from blocking input clicks */
+    pointer-events: none;
+    /* Prevents the icon from blocking input clicks */
 }
 
 .input-container input {
     width: 100%;
-    padding: 10px 10px 10px 40px; /* Adjusted padding to make space for the icon */
+    padding: 10px 10px 10px 40px;
+    /* Adjusted padding to make space for the icon */
     border-radius: 10px;
     border: none;
     background-color: rgb(22, 22, 22);
@@ -84,12 +102,13 @@ nav input {
     font-size: 14px;
     font-weight: 700;
     font-family: "Poppins", serif;
-    outline: none; /* Added to remove the highlight */
+    outline: none;
+    /* Added to remove the highlight */
 }
 
 .search-coffee {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     margin-bottom: 5px;
 }
@@ -116,11 +135,11 @@ nav input {
     justify-content: center;
     width: 50px;
     height: 37px;
-    transition: background-color 0.2s;
-} 
+    transition: background-color 0.3s, transform 0.3s;
+}
 
 .search-coffee filter img {
-    background-color: rgb(143, 82, 2);
+    background-color: rgb(143, 58, 2);
 }
 
 .search-coffee a img {
@@ -131,6 +150,7 @@ nav input {
 
 .search-coffee a:hover {
     background-color: rgb(87, 35, 0);
+    transform: scale(1.05);
 }
 
 .offer-img {
@@ -142,3 +162,179 @@ nav input {
     border-radius: 10px;
 }
 
+
+.filter {
+    position: relative;
+    top: 70px;
+}
+
+.filter ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    /* overflow-x: scroll */
+    list-style: none;
+}
+
+.filter ul li a {
+    margin: 5px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Poppins", serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 37px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.filter ul li a:hover {
+    background-color: rgb(117, 48, 2);
+    color: #e7e7e7;
+    transform: scale(1.05);
+}
+
+.shoplist {
+    position: relative;
+    top: 100px;
+    height: auto;
+}
+
+.grid-container {
+    position: relative;
+    top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(119px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+}
+
+.shop-item {
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    border: 1px solid #fcfcfc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: start;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shop-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.shop-item img {
+    width: 135px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.shop-item h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addit a img {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    transition: all 0.4s;
+}
+
+.addit a {
+    display: flex;
+    align-items: center;
+    margin: 0px 40px;
+    border: 2px solid #aa5704;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.addit a:hover {
+    background-color: #72d6f5;
+    border: 2px solid #72d6f5;
+    color: #fff;
+    filter: invert(1);
+}
+
+
+
+
+
+
+
+
+
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home-icon {
+    background-image: url('home.svg');
+}
+
+.heart-icon {
+    background-image: url('heart.svg');
+}
+
+.notification-icon {
+    background-image: url('notification.svg');
+}
+
+.profile-icon {
+    background-image: url('profile.svg');
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #ddd;
+}
+
+.footer-item {
+    color: #8a8a8a;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-item.active {
+    color: #ff8000;
+}
+
+.footer-item:hover {
+    color: #ff8000;
+    transform: scale(1.1);
+}
